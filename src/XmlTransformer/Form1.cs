@@ -24,18 +24,6 @@ namespace XmlTransformer
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            var xmlPath = Path.Combine("Data", "SaveResult.xml");
-            var xslPath = Path.Combine("Data", "FTSRes-v1.4.xsl");
-
-            if (File.Exists(xmlPath))
-            {
-                txtXml.Text = XDocument.Parse(File.ReadAllText(xmlPath)).ToString();
-            }
-
-            if (File.Exists(xslPath))
-            {
-                txtXsl.Text = XDocument.Parse(File.ReadAllText(xslPath)).ToString();
-            }
         }
 
         private void btnTransform_Click(object sender, EventArgs e)
